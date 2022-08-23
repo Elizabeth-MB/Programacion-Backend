@@ -29,4 +29,7 @@ const fs = require('fs')
 
 
 // AGREGAR CONTENIDO A UN ARCHIVO YA EXISTENTE SIN SOBREESCRIBIR
-fs.appendFileSync('clase04.txt', 'texto nuevo agregado')
+// fs.appendFileSync('clase04.txt', '\ntexto nuevo agregado')
+
+// Borra el archivo
+fs.unlinkSync('clase04.txt')
