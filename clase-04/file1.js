@@ -15,9 +15,18 @@ const fs = require('fs')
 /* Forma 2, usando toString */
 /* Implementamos un trycatch, en caso de que no exista el archivo que se va leer, captura el error */
 
-try {
+/* try {
     let contenido = fs.readFileSync('clase04.txt')
     console.log(contenido.toString());
-} catch  {
+} catch { */
+// } catch (err) {
+    /* En caso de que no exista el archivo, mostramos el error */
+    // console.log(err.message);
     
-}
+    // En caso de que no exista el archivo, lo creamos
+/*     fs.writeFileSync('clase04.txt', 'Ahora si existe')
+} */
+
+
+// AGREGAR CONTENIDO A UN ARCHIVO YA EXISTENTE SIN SOBREESCRIBIR
+fs.appendFileSync('clase04.txt', 'texto nuevo agregado')
